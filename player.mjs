@@ -1,7 +1,7 @@
 /*
  * TODO: implement this class.
  */
-export default class Player {
+export const PlayerClass = class Player {
   static name = 'ANDY';
 
   /**
