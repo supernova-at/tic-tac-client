@@ -1,22 +1,25 @@
 // Imports.
 import WebSocket from 'ws';
-//import { PlayerClass } from './player.mjs';
+import Player from './player.mjs';
 
 // Members.
-const playerName = 'test';
+const playerName = Player.name;
 const socket = new WebSocket(`wss://hidden-falls-43709.herokuapp.com?name=${playerName}`);
+console.log(`I am ${playerName}.`);
 
 socket.onopen = () => {
   console.log('Connected to server.');
 };
 
 socket.onmessage = event => {
-  console.log(`Received ${event}.`);
-
   const data = JSON.parse(event.data);
 
   if (data.type === 'makeMove') {
-    const move = 0; //Player.makeMove(data.gameState);
+    console.log(`Received a makeMove request with board: ${data.gameState}.`);
+
+    const move = Player.makeMove(data.gameState);
+    console.log(`Responding with move: ${move}.`);
+
     socket.send(JSON.stringify({
       type: 'move',
       move: move,

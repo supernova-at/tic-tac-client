@@ -1,8 +1,10 @@
 /*
  * TODO: implement this class.
  */
-export const PlayerClass = class Player {
-  static name = 'ANDY';
+export default class Player {
+  static get name () {
+    return `TEST ${Math.floor(Math.random() * 100)}`;
+  }
 
   /**
    * IMPLEMENT: Given the current game state, return back
