@@ -3,12 +3,15 @@
  */
 export default class Player {
   static get name () {
-    return `TEST ${Math.floor(Math.random() * 100)}`;
+    return `Andy is Awesome`;
   }
 
   /**
    * IMPLEMENT: Given the current game state, return back
    * your desired move.
+   * 
+   * @param {string} token Your team's token (X or O).
+   *
    * @param {Array} gameState The current state of the game.
    *  The array [-, X, O, X, O, -, -, -, X] represents the following:
    *  - | X | O

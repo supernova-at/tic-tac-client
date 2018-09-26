@@ -7,7 +7,15 @@
     "node": "8.11.1"
   },
   "scripts": {
-    "start": "node --experimental-modules index.mjs"
+    "team1": "node --experimental-modules tournament.mjs --team 1",
+    "team2": "node --experimental-modules tournament.mjs --team 2",
+    "team3": "node --experimental-modules tournament.mjs --team 3",
+    "team4": "node --experimental-modules tournament.mjs --team 4",
+    "team5": "node --experimental-modules tournament.mjs --team 5",
+    "team6": "node --experimental-modules tournament.mjs --team 6",
+    "team7": "node --experimental-modules tournament.mjs --team 7",
+    "team8": "node --experimental-modules tournament.mjs --team 8",
+    "tournament": "concurrently \"npm run team1\" \"npm run team2\" \"npm run team3\" \"npm run team4\" \"npm run team5\" \"npm run team6\" \"npm run team7\" \"npm run team8\""
   },
   "repository": {
     "type": "git",
@@ -21,6 +29,10 @@
   },
   "homepage": "https://github.com/supernova-at/tic-tac-client#readme",
   "dependencies": {
+    "concurrently": "^4.0.1",
     "ws": "6.0.0"
+  },
+  "devDependencies": {
+    "minimist": "^1.2.0"
   }
 }

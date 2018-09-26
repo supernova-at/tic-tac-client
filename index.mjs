@@ -17,7 +17,7 @@ socket.onmessage = event => {
   if (data.type === 'makeMove') {
     console.log(`Received a makeMove request with board: ${data.gameState}.`);
 
-    const move = Player.makeMove(data.gameState);
+    const move = Player.makeMove(data.token, data.gameState);
     console.log(`Responding with move: ${move}.`);
 
     socket.send(JSON.stringify({
