@@ -37,6 +37,10 @@ export default class Player {
       antitoken = 'X'
     }
 
+    if (gameState[4] === '-') {
+      move = 4;
+    }
+
     gameState.forEach((item, index) => {
       // console.log(index)
       if (item === '-') {
