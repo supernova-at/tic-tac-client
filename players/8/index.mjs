@@ -3,7 +3,7 @@
  */
 export default class Player {
   static get name () {
-    return `Andy is Awesome`;
+    return `Andy is Awesomest`;
   }
 
   /**
