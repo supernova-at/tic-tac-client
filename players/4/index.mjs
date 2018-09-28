@@ -37,16 +37,16 @@ export default class Player {
       antitoken = 'X'
     }
 
-    for (let item of gameState) {
-      if (gameState[item] === '-') {
-        neighborObject[item].forEach(neighbor => {
+    gameState.forEach((item, index) => {
+      if (gameState[index] === '-') {
+        neighborObject[index].forEach(neighbor => {
           if (gameState[neighbor] == token) {
-            move = Number(item)
+            move = Number(index)
           }
         })
       }
-    }
-    
+    })
+
     if (checkForDiagonalVic(antitoken, gameState)) {
       move = checkForDiagonalVic(antitoken, gameState)
     }
@@ -66,6 +66,8 @@ export default class Player {
     if (checkForVertVic(token, gameState)) {
       move = checkForVertVic(token, gameState)
     }
+
+    console.log(move)
 
     return move || gameState.indexOf('-');
   }
