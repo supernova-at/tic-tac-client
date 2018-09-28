@@ -67,8 +67,6 @@ export default class Player {
       move = checkForVertVic(token, gameState)
     }
 
-    console.log(move)
-
     return move || gameState.indexOf('-');
   }
 };
