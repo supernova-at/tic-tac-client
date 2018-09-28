@@ -38,7 +38,8 @@ export default class Player {
     }
 
     gameState.forEach((item, index) => {
-      if (gameState[index] === '-') {
+      // console.log(index)
+      if (item === '-') {
         neighborObject[index].forEach(neighbor => {
           if (gameState[neighbor] == token) {
             move = Number(index)

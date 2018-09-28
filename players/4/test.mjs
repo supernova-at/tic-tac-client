@@ -1,3 +1,3 @@
 import Player from './index';
 
-Player.makeMove('X', ['-', '-', '-', '-', '-', '-', '-', '-', '-'])
+Player.makeMove('X', ['X', '-', '-', '-', '-', '-', '-', '-', '-'])
