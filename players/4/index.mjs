@@ -42,7 +42,6 @@ export default class Player {
     }
 
     gameState.forEach((item, index) => {
-      // console.log(index)
       if (item === '-') {
         neighborObject[index].forEach(neighbor => {
           if (gameState[neighbor] == token) {
